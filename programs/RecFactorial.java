@@ -1,16 +1,17 @@
 class RecFactorial {
+	static int fact=1;
   public static void main(String[] args) {
-    int fact=1;
-		int no=5, res;
-		factorial f= new factorial();
-		res=f.calFact(no);
-		System.out.println(res); 
+		
+		int no=5;
+		RecFactorial ob= new RecFactorial();
+		ob.calcFact(no);
+		System.out.println("factorial of"+ no + "is " + fact); 
   }
-	int calFact(int no){
-if(no>1){
+	void calcFact(int no){
+if(no>=1)
+{
 	fact=fact*no;
-	calFact(no-1);
-	return fact;
+	calcFact(no-1);
 }
 	}
 }
